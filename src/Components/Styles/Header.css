@@ -1,0 +1,32 @@
+div, header, h1, h2, h3, p, button {
+    margin: 0;
+    padding: 0;
+}
+
+.header-container {
+    background-color: #5a3a31;
+    padding: 35px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.h1-website-title {
+    color: #BCAB79;
+    margin-bottom: 25px;
+}
+
+.get-started-btn {
+    background-color: #2978A0;
+    border: 1px solid #315659;
+    color: #BCAB79;
+    padding: 20px;
+    font-size: xx-large;
+    text-decoration: none;
+}
+
+.get-started-btn:hover {
+    background-color: #315659;
+    cursor: pointer;
+}

@@ -1,0 +1,36 @@
+h2 {
+    font-size: x-large;
+}
+
+h3 {
+    color: lightslategrey;
+    font-size: larger;
+}
+
+.website-background {
+    background-color: #315659;
+    height: 100vh;
+}
+
+.character-container {
+    display: flex;
+    align-content: center;
+    text-align: center;
+    flex-direction: column;
+    background-color: #BCAB79;
+    width: 300px;
+    height: auto;
+    padding: 10px;
+    margin: 50px;
+    cursor: pointer;
+}
+
+.image-container {
+    height: 150px;
+    width: auto;
+    margin: 10px 5px 10px 5px;
+    background-image: url('https://www.globalpharmatek.com/wp-content/uploads/2016/10/orionthemes-placeholder-image.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
