@@ -35,3 +35,28 @@
     font-size: xx-large;
     text-decoration: none;
 }
+
+.main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.class-select-container {
+    padding: 20px;
+    margin: 10px;
+    background-color: #BCAB79;
+    width: 45%;
+}
+
+.class-select-container:hover {
+    border: 10px solid #5a3a31;
+    margin: 0px;
+    cursor: pointer;
+}
+
+.class-name {
+    color: #5a3a31;
+    text-align: center;
+}

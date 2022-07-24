@@ -34,3 +34,29 @@
     font-size: xx-large;
     text-decoration: none;
 }
+
+.main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.feat-select-container {
+    padding: 20px;
+    margin: 10px;
+    background-color: #BCAB79;
+    width: 45%;
+}
+
+.feat-select-container:hover {
+    border: 10px solid #5a3a31;
+    margin: 0px;
+    cursor: pointer;
+}
+
+.feat-name {
+    color: #5a3a31;
+    text-align: center;
+    border-bottom: 2px solid #315659;
+}

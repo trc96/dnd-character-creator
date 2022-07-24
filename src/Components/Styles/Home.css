@@ -9,7 +9,8 @@ h3 {
 
 .website-background {
     background-color: #315659;
-    height: 100vh;
+    min-height: 100vh;
+    height: 100%;
 }
 
 .character-container {

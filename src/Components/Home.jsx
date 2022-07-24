@@ -13,7 +13,7 @@ const Home = () => {
                 <h2>'Placeholder for name'</h2>
                 <h3>'Placeholder for class'</h3>
                 <div className="image-container">
-                    <image src ="https://www.globalpharmatek.com/wp-content/uploads/2016/10/orionthemes-placeholder-image.jpg" alt="Placeholder for image" />
+                    {/* <img src ="https://www.globalpharmatek.com/wp-content/uploads/2016/10/orionthemes-placeholder-image.jpg" alt="Placeholder for image" /> */}
                 </div>
             </div>
         </div>
