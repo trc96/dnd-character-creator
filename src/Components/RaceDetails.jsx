@@ -7,6 +7,15 @@ export default function RaceDetails({ children, isMenuModal }) {
     setShowModal(false);
   };
 
+//   useEffect(() => {
+//     axios
+//       .get(`https://www.dnd5eapi.co/api/features/${index}`)
+//       .then((res) => setFeatClasses(res.data.class.name));
+//     axios
+//       .get(`https://www.dnd5eapi.co/api/features/${index}`)
+//       .then((res) => setFeatDescs(res.data.desc));
+//   });
+
   return ReactDOM.createPortal(
     <div className="modal-backdrop">
       {showModal && (

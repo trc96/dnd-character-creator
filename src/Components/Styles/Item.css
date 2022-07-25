@@ -5,20 +5,26 @@
     align-items: center;
 }
 
-.class-select-container {
+.item-select-container {
     padding: 20px;
     margin: 10px;
     background-color: #BCAB79;
     width: 35%;
 }
 
-.class-name {
+.item-select-container:hover {
+    border: 10px solid #5a3a31;
+    margin: 0px;
+    cursor: pointer;
+}
+
+.item-name {
     color: #5a3a31;
     text-align: center;
     border-bottom: 2px solid #315659;
 }
 
-.class-details {
+.item-details {
     color: #5a3a31;
     font-weight: 400;
 }

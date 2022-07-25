@@ -2,7 +2,7 @@
 import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 import { useState, useEffect } from "react";
-import Races from "./Races";
+import Races from "./Arrays/Races";
 import Race from "./Race";
 import RaceDetails from "./RaceDetails";
 

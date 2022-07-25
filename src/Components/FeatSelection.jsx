@@ -40,7 +40,7 @@ const FeatSelection = (props) => {
             </Link>
           </div>
         </div>
-        {/* {featsMapped} */}
+        {featsMapped}
       </div>
     </div>
   );

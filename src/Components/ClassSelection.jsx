@@ -2,26 +2,33 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Class from "./Class";
 import axios from "axios";
+// import { connect } from "react-redux";
+// import { selectClass } from "../redux/reducers/characterReducer";
 
 //styles
 import "./Styles/ClassSelection.css";
 
 const ClassSelection = (props) => {
-  let [classes, setClasses] = useState([])
+  // const {name} = props.details
+  let [classes, setClasses] = useState([]);
 
   useEffect(() => {
     axios
       .get(`https://www.dnd5eapi.co/api/classes`)
-      .then((res) => setClasses(res.data.results))
-    }, [])
+      .then((res) => setClasses(res.data.results));
+  }, []);
 
   const classesMapped = classes.map((job) => {
     return (
       <div key={job.index}>
-        <Class details={job}/>
+        <Class details={job} />
       </div>
     );
   });
+
+  // const selectClass = () => {
+  //   props.selectClass(name);
+  // };
 
   // const racesMapped = classes.map((race) => {
   //   return (
@@ -41,16 +48,25 @@ const ClassSelection = (props) => {
             <Link className="nav-btns" to="/RaceSelection">
               Go Back
             </Link>
-            
-            <Link className="nav-btns" to="/FeatSelection">
+
+            <Link className="nav-btns" to="/ItemSelection">
               Next
             </Link>
           </div>
         </div>
-            {classesMapped}
+        {/* <div onClick={selectClass}>{classesMapped}</div> */}
+        <div>{classesMapped}</div>
       </div>
     </div>
   );
 };
 
-export default ClassSelection;
+// const mapStateToProps = (state, ownProps) => {
+//   return {
+//     class: state.class,
+//     detials: ownProps.details,
+//   };
+// };
+
+// export default connect(mapStateToProps, { selectClass })(ClassSelection);
+export default ClassSelection

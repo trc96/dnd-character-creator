@@ -1,13 +1,15 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import Races from "./Races";
+import Races from "./Arrays/Races";
+import { connect } from "react-redux/es/exports";
+import { selectRace } from "../redux/reducers/characterReducer";
 
 //styles
 import "./Styles/Race.css";
 
 const Race = (props) => {
-  const { index } = props.details;
+  const { name, index } = props.details;
   let [traits, setTraits] = useState([]);
 
   useEffect(() => {
@@ -15,6 +17,10 @@ const Race = (props) => {
       .get(`https://www.dnd5eapi.co/api/races/${index}/traits`)
       .then((res) => setTraits(res.data.results));
   }, []);
+
+  const selectRace = () => {
+    props.selectRace(props.details.name)
+  }
 
   const descMapped = Races.filter((race) => {
     return race.name === props.details.name;
@@ -28,7 +34,7 @@ const Race = (props) => {
 
   return (
     <div className="main">
-      <div className="race-select-container">
+      <div className="race-select-container" onClick={selectRace}>
         <h1 className="race-name">{props.details.name}</h1>
         <h2 className="race-details">{descMapped}</h2>
         <h2 className="race-traits-title">Racial Traits</h2>
@@ -42,4 +48,12 @@ const Race = (props) => {
   );
 };
 
-export default Race;
+const mapStateToProps = (state, ownProps) => {
+  return {
+    race: state.race,
+    details: ownProps.details
+  }
+}
+
+// export default Race;
+export default connect(mapStateToProps, { selectRace })(Race)

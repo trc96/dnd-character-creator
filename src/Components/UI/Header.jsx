@@ -1,8 +1,8 @@
-import Routes from "../Routes";
+import Routes from "../../Routes";
 import React from "react";
 import { useState } from "react";
 //styles
-import "./Styles/Header.css";
+import '../Styles/Header.css';
 import { Link } from "react-router-dom";
 
 const Header = () => {

@@ -1,11 +1,20 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import Classes from './Classes'
+import Classes from './Arrays/Classes'
+import { connect } from "react-redux";
+import { selectClass } from "../redux/reducers/characterReducer";
 
 //styles
 import "./Styles/Class.css";
 
 const Class = (props) => {
+
+  const {name} = props.details
+
+  const selectClass = () => {
+    props.selectClass(name)
+  }
+
   const jobMapped = Classes.filter((job) => {
     return job.name === props.details.name;
   }).map((details) => {
@@ -24,7 +33,8 @@ const Class = (props) => {
 
   return (
     <div className="main">
-      <div className="class-select-container">
+      {/* <div className="class-select-container"> */}
+      <div className="class-select-container" onClick={selectClass}>
         <h1 className="class-name">{props.details.name}</h1>
         {jobMapped}
       </div>
@@ -32,4 +42,12 @@ const Class = (props) => {
   );
 };
 
-export default Class;
+const mapStateToProps = (state, ownProps) => {
+  return {
+    class: state.class,
+    details: ownProps.details
+  }
+}
+
+export default connect(mapStateToProps, { selectClass })(Class)
+// export default Class;

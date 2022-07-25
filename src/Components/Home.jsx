@@ -1,4 +1,4 @@
-import Header from "./Header";
+import Header from "./UI/Header";
 import Routes from "../Routes";
 
 //styles
