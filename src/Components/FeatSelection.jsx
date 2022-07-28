@@ -28,7 +28,7 @@ const FeatSelection = (props) => {
     <div>
       <div className="website-background">
         <div className="header-container">
-          <h1 className="h1-website-title">DnD 5e Character Creator</h1>
+          <h1 className="h1-website-title">D&D 5e Character Creator</h1>
           <h2 className="h2-website-title">Feat Selection</h2>
           <div className="button-container">
             <Link className="nav-btns" to="/ClassSelection">

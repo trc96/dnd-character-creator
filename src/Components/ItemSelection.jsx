@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Item from "./Item";
+import { useSelector } from "react-redux/es/hooks/useSelector";
 
 //styles
 import "./Styles/ItemSelection.css";
@@ -18,7 +19,7 @@ const ItemSelection = (props) => {
   const itemsMapped = items.map((item) => {
     return (
       <div key={item.index}>
-        <Item details={item}/>
+        <Item details={item} />
       </div>
     );
   });
@@ -27,7 +28,7 @@ const ItemSelection = (props) => {
     <div>
       <div className="website-background">
         <div className="header-container">
-          <h1 className="h1-website-title">DnD 5e Character Creator</h1>
+          <h1 className="h1-website-title">D&D 5e Character Creator</h1>
           <h2 className="h2-website-title">Item Selection</h2>
           <div className="button-container">
             <Link className="nav-btns" to="/ClassSelection">
@@ -35,7 +36,7 @@ const ItemSelection = (props) => {
             </Link>
 
             <Link className="nav-btns" to="/">
-              Finished
+              Back Home
             </Link>
           </div>
         </div>

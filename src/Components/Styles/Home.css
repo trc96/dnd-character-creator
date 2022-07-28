@@ -14,16 +14,23 @@ h3 {
 }
 
 .character-container {
-    display: flex;
-    align-content: center;
-    text-align: center;
-    flex-direction: column;
+    padding: 20px;
+    margin: 10px;
     background-color: #BCAB79;
-    width: 300px;
-    height: auto;
-    padding: 10px;
-    margin: 50px;
+    width: 35%;
     cursor: pointer;
+    text-decoration: none;
+}
+
+.character-container:hover {
+    border: 10px solid #5a3a31;
+    margin: 0px;
+}
+
+.character-details {
+    color: #5a3a31;
+    font-weight: 400;
+    text-align: center;
 }
 
 .image-container {

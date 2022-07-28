@@ -58,6 +58,8 @@
     background-color: #BCAB79;
     width: 35%;
     cursor: pointer;
+    text-decoration: none;
+    border: 10px hidden #5a3a31
 }
 
 .race-select-container:hover {

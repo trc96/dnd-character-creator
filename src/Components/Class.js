@@ -1,19 +1,19 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import Classes from './Arrays/Classes'
+import Classes from "./Arrays/Classes";
 import { connect } from "react-redux";
 import { selectClass } from "../redux/reducers/characterReducer";
+import { Link } from "react-router-dom";
 
 //styles
 import "./Styles/Class.css";
 
 const Class = (props) => {
-
-  const {name} = props.details
+  const { name } = props.details;
 
   const selectClass = () => {
-    props.selectClass(name)
-  }
+    props.selectClass(name);
+  };
 
   const jobMapped = Classes.filter((job) => {
     return job.name === props.details.name;
@@ -33,11 +33,12 @@ const Class = (props) => {
 
   return (
     <div className="main">
-      {/* <div className="class-select-container"> */}
-      <div className="class-select-container" onClick={selectClass}>
-        <h1 className="class-name">{props.details.name}</h1>
-        {jobMapped}
-      </div>
+      <Link className="class-select-container" to="/ItemSelection" onClick={selectClass}>
+        <div>
+          <h1 className="class-name">{props.details.name}</h1>
+          {jobMapped}
+        </div>
+      </Link>
     </div>
   );
 };
@@ -45,9 +46,9 @@ const Class = (props) => {
 const mapStateToProps = (state, ownProps) => {
   return {
     class: state.class,
-    details: ownProps.details
-  }
-}
+    details: ownProps.details,
+  };
+};
 
-export default connect(mapStateToProps, { selectClass })(Class)
+export default connect(mapStateToProps, { selectClass })(Class);
 // export default Class;

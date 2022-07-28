@@ -36,7 +36,7 @@ const RaceSelection = (props) => {
   return (
     <div className="website-background">
       <div className="header-container">
-        <h1 className="h1-website-title">DnD 5e Character Creator</h1>
+        <h1 className="h1-website-title">D&D 5e Character Creator</h1>
         <h2 className="h2-page-title">Race Selection</h2>
         <div className="button-container">
           <Link className="nav-btns" to="/">

@@ -10,6 +10,7 @@
     margin: 10px;
     background-color: #BCAB79;
     width: 35%;
+    text-decoration: none;
 }
 
 .item-select-container:hover {

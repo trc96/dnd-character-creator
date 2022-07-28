@@ -19,8 +19,8 @@ const Race = (props) => {
   }, []);
 
   const selectRace = () => {
-    props.selectRace(props.details.name)
-  }
+    props.selectRace(props.details.name);
+  };
 
   const descMapped = Races.filter((race) => {
     return race.name === props.details.name;
@@ -34,14 +34,16 @@ const Race = (props) => {
 
   return (
     <div className="main">
-      <div className="race-select-container" onClick={selectRace}>
-        <h1 className="race-name">{props.details.name}</h1>
-        <h2 className="race-details">{descMapped}</h2>
-        <h2 className="race-traits-title">Racial Traits</h2>
-        {traits.map((trait) => {
-          return <h2 className="race-details">{trait.name}</h2>;
-        })}
-      </div>
+      <Link className="race-select-container" to="/ClassSelection" onClick={selectRace}>
+        <div>
+          <h1 className="race-name">{props.details.name}</h1>
+          <h2 className="race-details">{descMapped}</h2>
+          <h2 className="race-traits-title">Racial Traits</h2>
+          {traits.map((trait) => {
+            return <h2 className="race-details">{trait.name}</h2>;
+          })}
+        </div>
+      </Link>
       {/* <Link className= "link" to={`/race/${name}`}> */}
       {/* </Link> */}
     </div>
@@ -51,9 +53,8 @@ const Race = (props) => {
 const mapStateToProps = (state, ownProps) => {
   return {
     race: state.race,
-    details: ownProps.details
-  }
-}
+    details: ownProps.details,
+  };
+};
 
-// export default Race;
-export default connect(mapStateToProps, { selectRace })(Race)
+export default connect(mapStateToProps, { selectRace })(Race);
